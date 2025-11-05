@@ -7,7 +7,7 @@
   /* Neutrals */
   --clr-dark: #0d0d0d;
   --clr-light: #fff2ef;
-  --clr-gray: #b3b3c0;
+  --clr-gray: #b9b9b9;
 
   /* Shadows */
   --shadow-soft: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -132,6 +132,9 @@ header {
   width: 100%;
   gap: 1rem;
   font-size: var(--fs-600);
+  color: var(--clr-accent);
+}
+.nav-user a {
   color: var(--clr-accent);
 }
 /* NAVIGATION SEARCH BAR */

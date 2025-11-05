@@ -1,0 +1,116 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+}
+form p {
+  font-size: var(--fs-600);
+  margin-bottom: 1.5rem;
+}
+.input_fields {
+  width: 90%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin: auto;
+}
+.input_group {
+  position: relative;
+}
+.input_group input {
+  width: 100%;
+  padding: 1rem;
+  font-size: var(--fs-400);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  background: transparent;
+}
+.input_group label {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-80%);
+  color: #777;
+  font-size: var(--fs-400);
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+/* Move label up when typing */
+.input_group input:focus + label,
+.input_group input:valid + label {
+  top: 0.4rem;
+  font-size: var(--fs-300);
+  color: var(--clr-primary);
+  background: var(--clr-light);
+  padding: 0;
+}
+.togglePass {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+}
+.input_fields button {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 25px;
+  background-color: var(--clr-primary);
+  color: var(--clr-light);
+  font-size: var(--fs-500);
+  font-weight: 600;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.input_fields button:hover {
+  opacity: 0.9;
+}
+/* Remember & Create Account Styling */
+.remember_forgot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--fs-300);
+  color: #555;
+  width: 100%;
+  padding: 0 0.3rem;
+}
+.remember_forgot label {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+}
+.remember_forgot input[type="checkbox"] {
+  accent-color: var(--clr-primary);
+}
+.remember_forgot .forgot {
+  text-decoration: none;
+  color: var(--clr-primary);
+  transition: 0.3s;
+}
+.remember_forgot .forgot:hover {
+  text-decoration: underline;
+}
+/* Create account link */
+.create_account p {
+  font-size: var(--fs-300);
+  color: #555;
+}
+.create_account a {
+  color: var(--clr-primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.create_account a:hover {
+  text-decoration: underline;
+}

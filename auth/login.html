@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
+    <title>GSA Sari-Sari ATBP | Login</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../auth/auth.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <form>
+      <div class="container">
+        <p>Login your Account</p>
+
+        <div class="input_fields">
+          <!-- INPUT FIELD GROUPS FOR EMAIL AND PASSWORD -->
+          <div class="input_group">
+            <input type="email" name="user_email" required />
+            <label>Email Account</label>
+          </div>
+          <div class="input_group">
+            <input type="password" name="user_pass" id="password" required />
+            <label>Password</label>
+            <i class="fa-regular fa-eye-slash togglePass"></i>
+          </div>
+          <!-- REMEMBER ME AND FORGOT PASSWORD -->
+          <div class="remember_forgot">
+            <label>
+              <input type="checkbox" name="remember_me" />
+              Remember me
+            </label>
+            <a href="#" class="forgot">Forgot password?</a>
+          </div>
+
+          <button type="submit">Login</button>
+
+          <div class="create_account">
+            <p>
+              Don’t have an account?
+              <a href="../auth/register.html" class="create">Create one</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <script>
+      const togglePass = document.querySelector(".togglePass");
+      const passwordField = document.querySelector("#password");
+
+      togglePass.addEventListener("click", () => {
+        const type =
+          passwordField.getAttribute("type") === "password"
+            ? "text"
+            : "password";
+        passwordField.setAttribute("type", type);
+        togglePass.classList.toggle("fa-eye");
+        togglePass.classList.toggle("fa-eye-slash");
+      });
+    </script>
+  </body>
+</html>
