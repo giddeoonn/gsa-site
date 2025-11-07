@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
     <title>GSA Sari-Sari ATBP | Home</title>
+    <link rel="icon" href="/assets/images/favicon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/css/index.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link
       rel="stylesheet"
@@ -23,7 +25,7 @@
     <!-- DESKTOP NAV BAR -->
     <nav id="desktop-nav">
       <div class="container">
-        <div class="logo"><h5>GSA Sari-Sari ATBP</h5></div>
+        <div class="logo"><img src="assets/images/logo.svg" alt="" /></div>
         <ul class="nav-links">
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="shop.html">Shop</a></li>
@@ -49,7 +51,7 @@
     <!-- MOBILE NAV BAR -->
     <nav id="mobile-nav">
       <div class="container">
-        <div class="logo"><h5>GSA Sari-Sari ATBP</h5></div>
+        <div class="logo"><img src="assets/images/logo.svg" alt="" /></div>
         <div class="right-navbar">
           <div class="nav-searchbar">
             <i class="fa-solid fa-magnifying-glass mobile-searchbtn"></i>
@@ -105,6 +107,96 @@
       </div>
     </header>
 
+    <main>
+      <section id="category_section">
+        <div class="container">
+          <!-- GIRL -->
+          <div class="category">
+            <div class="category-grid_header">
+              <p>GIRLS</p>
+              <a href="">SEE MORE</a>
+            </div>
+
+            <div class="category-slider">
+              <button class="cat-btn left">&#10094;</button>
+              <div class="category-grid">
+                <div class="category-card">
+                  <a href=""
+                    ><img src="/assets/images/category/baby_girl.svg" alt=""
+                  /></a>
+                </div>
+                <div class="category-card">
+                  <a href=""
+                    ><img src="/assets/images/category/toddler_girl.svg" alt=""
+                  /></a>
+                </div>
+                <div class="category-card">
+                  <a href=""
+                    ><img src="/assets/images/category/preteen_girl.svg" alt=""
+                  /></a>
+                </div>
+              </div>
+              <button class="cat-btn right">&#10095;</button>
+            </div>
+          </div>
+
+          <!-- BOY -->
+          <div class="category boy">
+            <div class="category-grid_header">
+              <p>BOYS</p>
+              <a href="">SEE MORE</a>
+            </div>
+
+            <div class="category-slider">
+              <button class="cat-btn left">&#10094;</button>
+              <div class="category-grid">
+                <div class="category-card">
+                  <a href=""
+                    ><img src="/assets/images/category/baby_boy.svg" alt=""
+                  /></a>
+                </div>
+                <div class="category-card">
+                  <a href=""
+                    ><img src="/assets/images/category/toddler_boy.svg" alt=""
+                  /></a>
+                </div>
+                <div class="category-card">
+                  <a href=""
+                    ><img src="/assets/images/category/preteen_boy.svg" alt=""
+                  /></a>
+                </div>
+              </div>
+              <button class="cat-btn right">&#10095;</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
     <script src="assets/js/script.js"></script>
+    <script>
+      document.querySelectorAll(".category-slider").forEach((slider) => {
+        const grid = slider.querySelector(".category-grid");
+        const cards = slider.querySelectorAll(".category-card");
+        const left = slider.querySelector(".cat-btn.left");
+        const right = slider.querySelector(".cat-btn.right");
+
+        let index = 0;
+
+        const updateSlide = () => {
+          grid.style.transform = `translateX(-${index * 100}%)`;
+        };
+
+        left.addEventListener("click", () => {
+          index = index > 0 ? index - 1 : cards.length - 1;
+          updateSlide();
+        });
+
+        right.addEventListener("click", () => {
+          index = index < cards.length - 1 ? index + 1 : 0;
+          updateSlide();
+        });
+      });
+    </script>
   </body>
 </html>

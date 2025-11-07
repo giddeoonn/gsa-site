@@ -6,6 +6,9 @@ form {
   text-align: center;
   min-height: 100vh;
 }
+form .logo img {
+  width: 12rem;
+}
 form p {
   font-size: var(--fs-600);
   margin-bottom: 1.5rem;
