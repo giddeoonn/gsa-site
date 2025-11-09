@@ -111,9 +111,9 @@
       <section id="category_section">
         <div class="container">
           <!-- GIRL -->
-          <div class="category">
-            <div class="category-grid_header">
-              <p>GIRLS</p>
+          <div class="category girl">
+            <div class="category_header">
+              <b>GIRLS</b>
               <a href="">SEE MORE</a>
             </div>
 
@@ -142,8 +142,8 @@
 
           <!-- BOY -->
           <div class="category boy">
-            <div class="category-grid_header">
-              <p>BOYS</p>
+            <div class="category_header">
+              <b>BOYS</b>
               <a href="">SEE MORE</a>
             </div>
 
@@ -176,26 +176,46 @@
     <script src="assets/js/script.js"></script>
     <script>
       document.querySelectorAll(".category-slider").forEach((slider) => {
-        const grid = slider.querySelector(".category-grid");
         const cards = slider.querySelectorAll(".category-card");
         const left = slider.querySelector(".cat-btn.left");
         const right = slider.querySelector(".cat-btn.right");
 
-        let index = 0;
+        const gap = parseInt(getComputedStyle(cards[0]).marginRight) || 8;
+        const scrollAmount = cards[0].offsetWidth + gap;
 
-        const updateSlide = () => {
-          grid.style.transform = `translateX(-${index * 100}%)`;
+        // BUTTON VISIBILITIES
+        const updateButtons = () => {
+          if (slider.scrollLeft <= 0) {
+            left.style.display = "none";
+          } else {
+            left.style.display = "block";
+          }
+
+          if (
+            slider.scrollLeft + slider.clientWidth >=
+            slider.scrollWidth - 1
+          ) {
+            right.style.display = "none";
+          } else {
+            right.style.display = "block";
+          }
         };
 
-        left.addEventListener("click", () => {
-          index = index > 0 ? index - 1 : cards.length - 1;
-          updateSlide();
+        updateButtons();
+
+        slider.addEventListener("scroll", updateButtons); //For SCROLL EVENTS
+
+        // BUTTONS CLICK EVENTS FUNCTIONALITY
+        right.addEventListener("click", () => {
+          slider.scrollBy({ left: scrollAmount, behavior: "smooth" });
         });
 
-        right.addEventListener("click", () => {
-          index = index < cards.length - 1 ? index + 1 : 0;
-          updateSlide();
+        left.addEventListener("click", () => {
+          slider.scrollBy({ left: -scrollAmount, behavior: "smooth" });
         });
+
+        // RECALCULATE WINDOWS SIZE
+        window.addEventListener("resize", updateButtons);
       });
     </script>
   </body>
