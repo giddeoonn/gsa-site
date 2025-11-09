@@ -1,20 +1,28 @@
+main {
+  text-align: center;
+}
+.section-titles {
+  margin: 2rem 0;
+}
 /* HEADER/HERO */
 header {
   position: relative;
-  background-image: url("../images/hero_banners/home.svg");
+  background-image: url("../images/hero_banners/home.jpg");
   background-position: center;
+  background-position-y: 25%;
   background-repeat: no-repeat;
   background-size: cover;
   align-items: center;
   width: 100%;
   height: 35vh;
   max-height: 250px;
+  box-shadow: var(--shadow-strong);
 }
-.overlay {
+/* .overlay {
   width: 100%;
   height: 100%;
-  background-color: #0d0d0d3d;
-}
+  background-color: #0d0d0d00;
+} */
 .hero-text {
   position: absolute;
   inset: 0;
@@ -25,15 +33,15 @@ header {
   text-align: center;
   padding: 1rem 0.5rem;
   font-size: var(--fs-500);
-  color: var(--clr-light);
-  text-shadow: var(--text-shadow-medium);
+  color: var(--clr-accent);
   line-height: 1.4;
+  text-shadow: var(--text-shadow-strong);
+}
+.hero-text p {
+  color: var(--clr-dark);
 }
 /* CATEGORY SECTION */
 #category_section {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -98,13 +106,16 @@ header {
 /* CATEGORY CARDS */
 .category-card {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   flex: 0 0 100%;
-  justify-content: center;
   background-color: var(--clr-light);
   border-radius: 15px;
   scroll-snap-align: center;
 }
 .category-card img {
+  margin-bottom: -1rem;
+  width: 100%;
   height: 100%;
 }
 /* ARROW BUTTONS */
@@ -133,6 +144,12 @@ header {
 .cat-btn.right {
   right: 0.5rem;
 }
+@media (min-width: 450px) {
+  /* CATEGORIES */
+  .category-card {
+    flex: 0 0 48%;
+  }
+}
 /* TABLET LAYOUT RESPONSIVENESS */
 @media (min-width: 450px) and (max-width: 1023px) {
   /* HEADER/HERO */
@@ -142,10 +159,6 @@ header {
   }
   .hero-text {
     font-size: var(--fs-600);
-  }
-  /* CATEGORIES */
-  .category-card {
-    flex: 0 0 50%;
   }
 }
 /* DESKTOP LAYOUT RESPONSIVENESS */
@@ -162,7 +175,10 @@ header {
   #category_section .container {
     flex-direction: row;
   }
-  .category-card {
-    flex: 0 0 48%;
+  .category_header b {
+    font-size: var(--fs-600);
+  }
+  .category_header a {
+    font-size: var(--fs-500);
   }
 }
