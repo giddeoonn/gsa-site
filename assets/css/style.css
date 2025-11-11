@@ -2,7 +2,7 @@
   /* Brand Colors */
   --clr-primary: #f7a5a5;
   --clr-secondary: #ffdbb6;
-  --clr-accent: #1a2a4f;
+  --clr-accent: hsl(222, 50%, 21%);
 
   /* Neutrals */
   --clr-dark: #0d0d0d;
@@ -11,10 +11,11 @@
 
   /* Gradient using the primary and accent colors */
   --gradient-primary: linear-gradient(
-    135deg,
-    var(--clr-primary),
-    var(--clr-accent)
+    to bottom,
+    var(--clr-light) 0%,
+    #fff 100%
   );
+  --gradient-secondary: linear-gradient(to top, var(--clr-light) 0%, #fff 100%);
 
   /* Shadows */
   --shadow-soft: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -72,8 +73,14 @@ a:focus {
 }
 html,
 body {
-  background-color: var(--clr-light);
   overflow-x: hidden;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 .container {
   width: 100%;
@@ -91,7 +98,7 @@ body {
 nav {
   position: relative;
   z-index: 1000;
-  background-color: var(--clr-light);
+  background-color: #fff;
 }
 #desktop-nav {
   display: none;
@@ -114,7 +121,7 @@ nav {
 }
 #mobile-nav .right-navbar {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   width: 100%;
   gap: 1rem;

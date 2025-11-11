@@ -1,3 +1,6 @@
+body {
+  background-color: var(--clr-light);
+}
 form {
   display: flex;
   flex-direction: column;
