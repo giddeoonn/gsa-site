@@ -19,6 +19,7 @@
 
   /* Shadows */
   --shadow-soft: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 5px 15px rgba(0, 0, 0, 0.1.5);
   --shadow-strong: 0 6px 20px rgba(0, 0, 0, 0.2);
 
   /* Text Shadows */
@@ -254,6 +255,46 @@ nav {
   text-decoration-thickness: 0.5px;
 }
 
+/* FOOTER SECTION */
+/* footer {
+  background-color: var(--clr-light);
+  text-align: left;
+  padding: 2rem 2.5rem;
+}
+footer strong {
+  font-size: var(--fs-600);
+}
+footer p {
+  font-size: var(--fs-500);
+}
+footer .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+#footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#footer-links .quick-links {
+  display: flex;
+  gap: 1rem;
+  line-height: 2;
+}
+#footer-links a,
+#footer-links li {
+  color: var(--clr-dark);
+  font-weight: 600;
+  text-decoration: none;
+  list-style: none;
+}
+footer img {
+  width: 100%;
+} */
+
 /* TABLET RESPONSIVE LAYOUT */
 @media (min-width: 767px) and (max-width: 1023px) {
   #desktop-nav {
@@ -316,7 +357,7 @@ nav {
     width: 80%;
   }
   #desktop-nav .logo img {
-    width: 7rem;
+    width: 6rem;
   }
   #desktop-nav .right-navbar {
     display: flex;

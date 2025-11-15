@@ -54,10 +54,11 @@
   scroll-snap-align: center;
   padding: 1rem;
   background-color: white;
-  box-shadow: var(--shadow-strong);
+  box-shadow: var(--shadow-soft);
 }
 .product-card img {
   width: 100%;
+  border-radius: 15px;
 }
 .product-card .card-info {
   display: flex;
