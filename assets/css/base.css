@@ -1,0 +1,91 @@
+/* IMPORTS */
+@import url("https://fonts.googleapis.com/css2?family=Delius&display=swap");
+
+:root {
+  /* Brand Colors */
+  --clr-primary: #f7a5a5;
+  --clr-secondary: #f078b1;
+  --clr-accent: hsl(222, 50%, 21%);
+
+  /* Neutrals */
+  --clr-dark: #0d0d0d;
+  --clr-light: #fff2ef;
+  --clr-gray: #b9b9b9;
+
+  /* Gradient*/
+  --gradient-primary: linear-gradient(
+    to bottom,
+    var(--clr-light) 0%,
+    #fff 100%
+  );
+  --gradient-secondary: linear-gradient(to top, var(--clr-light) 0%, #fff 80%);
+
+  /* Shadows */
+  --shadow-soft: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 5px 15px rgba(0, 0, 0, 0.15);
+  --shadow-strong: 0 6px 20px rgba(0, 0, 0, 0.2);
+
+  /* Text Shadows */
+  --text-shadow-light: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  --text-shadow-medium: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  --text-shadow-strong: 3px 3px 6px rgba(0, 0, 0, 0.35);
+
+  /* Transitions */
+  --transition-fast: all 0.2s ease;
+  --transition-slow: all 0.4s ease;
+
+  /* Mobile Font Sizes */
+  --fs-900: 2.5rem; /* Hero title */
+  --fs-800: 2rem; /* Section titles */
+  --fs-700: 1.5rem; /* Subheadings */
+  --fs-600: 1.25rem; /* Card titles */
+  --fs-500: 1rem; /* Body text */
+  --fs-400: 0.875rem; /* Small text */
+}
+/* Tablet Font Sizes */
+@media (min-width: 767px) and (max-width: 1023px) {
+  :root {
+    --fs-900: 3.25rem; /* Hero title */
+    --fs-800: 2.5rem; /* Section titles */
+    --fs-700: 2rem; /* Subheadings */
+    --fs-600: 1.5rem; /* Card titles */
+    --fs-500: 1rem; /* Body text */
+    --fs-400: 0.875rem; /* Small text */
+  }
+}
+/* Desktop Font Sizes */
+@media (min-width: 1024px) {
+  :root {
+    --fs-900: 4rem; /* Hero title */
+    --fs-800: 3.25rem; /* Section titles */
+    --fs-700: 2.5rem; /* Subheadings */
+    --fs-600: 1.75rem; /* Card titles */
+    --fs-500: 1.125rem; /* Body text */
+    --fs-400: 1rem; /* Small text */
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Delius", cursive;
+}
+body {
+  overflow-x: hidden;
+  background: #fff;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}

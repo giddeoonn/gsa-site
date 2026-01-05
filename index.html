@@ -5,20 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
     <title>GSA Sari-Sari ATBP | Home</title>
     <link rel="icon" href="assets/images/favicon.svg" type="image/x-icon" />
-    <link rel="stylesheet" href="assets/css/index.css" />
-    <link rel="stylesheet" href="assets/css/root.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/product_card.css" />
+
+    <!-- LINKING SwiperJS CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
+    <!-- DEFAULT LINKS -->
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/page/index.css" />
+    <link rel="stylesheet" href="assets/css/components/nav.css" />
+    <link rel="stylesheet" href="assets/css/components/footer.css" />
+    <link rel="stylesheet" href="assets/css/components/slider.css" />
+    <link rel="stylesheet" href="assets/css/components/product_card.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
   </head>
   <body>
-    <!-- TAGLINE -->
-    <div class="nav-tagline">
+    <!-- ANNOUNCMENT BAR -->
+    <div class="announcment-bar">
       <div class="container">
-        <p>
+        <p class="announcment-text">
           Premium Branded Preloved Baby, Toddler, and Kids' Clothing –
           Affordable & Stylish!
         </p>
@@ -111,7 +122,10 @@
 
     <main>
       <!-- CATEGORY SECTION -->
-      <section id="category_section">
+      <section class="section section--category">
+        <div class="section__header">
+          <h4>Shop by Category</h4>
+        </div>
         <div class="container">
           <!-- GIRL -->
           <div class="category girl">
@@ -119,218 +133,257 @@
               <h3>GIRLS</h3>
               <a href="">SEE MORE</a>
             </div>
+            <div class="swiper">
+              <div class="card-wrapper">
+                <ul class="card-list swiper-wrapper">
+                  <li class="card-item swiper-slide">
+                    <a href="#" class="card-link"
+                      ><img
+                        class="card-image"
+                        src="assets/images/category/baby_girl.svg"
+                        alt=""
+                      />
+                    </a>
+                  </li>
+                  <li class="card-item swiper-slide">
+                    <a href="#" class="card-link"
+                      ><img
+                        class="card-image"
+                        src="assets/images/category/toddler_girl.svg"
+                        alt=""
+                      />
+                    </a>
+                  </li>
+                  <li class="card-item swiper-slide">
+                    <a href="#" class="card-link"
+                      ><img
+                        class="card-image"
+                        src="assets/images/category/preteen_girl.svg"
+                        alt=""
+                      />
+                    </a>
+                  </li>
+                </ul>
 
-            <div class="slider">
-              <button class="cat-btn left">&#10094;</button>
-              <div class="category-grid grid">
-                <div class="category-card card">
-                  <a href=""
-                    ><img src="assets/images/category/baby_girl.svg" alt=""
-                  /></a>
-                </div>
-                <div class="category-card card">
-                  <a href=""
-                    ><img src="assets/images/category/toddler_girl.svg" alt=""
-                  /></a>
-                </div>
-                <div class="category-card card">
-                  <a href=""
-                    ><img src="assets/images/category/preteen_girl.svg" alt=""
-                  /></a>
-                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-slider-button swiper-button-prev"></div>
+                <div class="swiper-slider-button swiper-button-next"></div>
               </div>
-              <button class="cat-btn right">&#10095;</button>
             </div>
           </div>
 
-          <!-- BOY -->
+          <!-- BOYS -->
           <div class="category boy">
             <div class="category_header">
-              <h3>BOYS</h3>
+              <h3>BOY</h3>
               <a href="">SEE MORE</a>
             </div>
+            <div class="swiper">
+              <div class="card-wrapper">
+                <ul class="card-list swiper-wrapper">
+                  <li class="card-item swiper-slide">
+                    <a href="#" class="card-link"
+                      ><img
+                        class="card-image"
+                        src="assets/images/category/baby_boy.svg"
+                        alt=""
+                      />
+                    </a>
+                  </li>
+                  <li class="card-item swiper-slide">
+                    <a href="#" class="card-link"
+                      ><img
+                        class="card-image"
+                        src="assets/images/category/toddler_boy.svg"
+                        alt=""
+                      />
+                    </a>
+                  </li>
+                  <li class="card-item swiper-slide">
+                    <a href="#" class="card-link"
+                      ><img
+                        class="card-image"
+                        src="assets/images/category/preteen_boy.svg"
+                        alt=""
+                      />
+                    </a>
+                  </li>
+                </ul>
 
-            <div class="slider">
-              <button class="cat-btn left">&#10094;</button>
-              <div class="category-grid grid">
-                <div class="category-card card">
-                  <a href=""
-                    ><img src="assets/images/category/baby_boy.svg" alt=""
-                  /></a>
-                </div>
-                <div class="category-card card">
-                  <a href=""
-                    ><img src="assets/images/category/toddler_boy.svg" alt=""
-                  /></a>
-                </div>
-                <div class="category-card card">
-                  <a href=""
-                    ><img src="assets/images/category/preteen_boy.svg" alt=""
-                  /></a>
-                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-slider-button swiper-button-prev"></div>
+                <div class="swiper-slider-button swiper-button-next"></div>
               </div>
-              <button class="cat-btn right">&#10095;</button>
             </div>
           </div>
         </div>
       </section>
 
       <!-- NEW ARRIVAL SECTION -->
-      <section id="new_arrivals">
+      <section class="section section--new_arrivals">
         <div class="container">
-          <div class="new_arrivals-header">
+          <div class="section__header">
             <h3>NEW ARRIVALS</h3>
             <a href="">SEE MORE</a>
           </div>
+          <div class="swiper">
+            <div class="card-product-wrapper">
+              <ul class="card-list swiper-wrapper">
+                <li class="card-item swiper-slide">
+                  <a href="#" class="card-link"
+                    ><img
+                      class="card-image"
+                      src="assets/images/item.jpg"
+                      alt=""
+                    />
+                    <p class="badge">For 0 - 36 Months</p>
+                    <h2 class="card-title">Baby Clothes</h2>
+                    <h3 class="card-price">P500.00</h3>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="#" class="card-link"
+                    ><img
+                      class="card-image"
+                      src="assets/images/itemtu.jpg"
+                      alt=""
+                    />
+                    <p class="badge">For 4 - 5 Years Old</p>
+                    <h2 class="card-title">Children Clothes</h2>
+                    <h3 class="card-price">P500.00</h3>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="#" class="card-link"
+                    ><img
+                      class="card-image"
+                      src="assets/images/itemtree.jpg"
+                      alt=""
+                    />
+                    <p class="badge">For 6 - 12 Years Old</p>
+                    <h2 class="card-title">Teen Clothes</h2>
+                    <h3 class="card-price">P500.00</h3>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="#" class="card-link"
+                    ><img
+                      class="card-image"
+                      src="assets/images/itemtu.jpg"
+                      alt=""
+                    />
+                    <p class="badge">For 0 - 36 Months</p>
+                    <h2 class="card-title">Baby Clothes</h2>
+                    <h3 class="card-price">P500.00</h3>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="#" class="card-link"
+                    ><img
+                      class="card-image"
+                      src="assets/images/item.jpg"
+                      alt=""
+                    />
+                    <p class="badge">For 0 - 36 Months</p>
+                    <h2 class="card-title">Baby Clothes</h2>
+                    <h3 class="card-price">P500.00</h3>
+                  </a>
+                </li>
+              </ul>
 
-          <div class="new_arrivals-products">
-            <div class="slider">
-              <button class="cat-btn left">&#10094;</button>
-              <div class="product-grid grid">
-                <!-- CARD 1 -->
-                <div class="product-card card">
-                  <img src="assets/images/item.jpg" alt="" />
-                  <div class="card-info">
-                    <strong class="card-name">PreLoved Baby Rumper Set </strong>
-                    <small class="card-price">100</small>
-                    <div class="card-actions">
-                      <a href="" class="buy_btn">VIEW ITEM</a>
-                      <a href="" class="cart_btn"
-                        ><i class="fa-solid fa-cart-plus"></i
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- CARD 2 -->
-                <div class="product-card card">
-                  <img src="assets/images/itemtu.jpg" alt="" />
-                  <div class="card-info">
-                    <strong class="card-name">GAP</strong>
-                    <small class="card-price">100</small>
-                    <div class="card-actions">
-                      <a href="" class="buy_btn">VIEW ITEM</a>
-                      <a href="" class="cart_btn"
-                        ><i class="fa-solid fa-cart-plus"></i
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- CARD 3 -->
-                <div class="product-card card">
-                  <img src="assets/images/itemtree.jpg" alt="" />
-                  <div class="card-info">
-                    <strong class="card-name">GAP</strong>
-                    <small class="card-price">100</small>
-                    <div class="card-actions">
-                      <a href="" class="buy_btn">VIEW ITEM</a>
-                      <a href="" class="cart_btn"
-                        ><i class="fa-solid fa-cart-plus"></i
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- CARD 4 -->
-                <div class="product-card card">
-                  <img src="assets/images/item.jpg" alt="" />
-                  <div class="card-info">
-                    <strong class="card-name">GAP</strong>
-                    <small class="card-price">100</small>
-                    <div class="card-actions">
-                      <a href="" class="buy_btn">VIEW ITEM</a>
-                      <a href="" class="cart_btn"
-                        ><i class="fa-solid fa-cart-plus"></i
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <button class="cat-btn right">&#10095;</button>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-slider-button swiper-button-prev"></div>
+              <div class="swiper-slider-button swiper-button-next"></div>
             </div>
           </div>
         </div>
       </section>
 
       <!-- ON SALE SECTION -->
-      <section id="on_sale">
+      <section class="section section--sales">
         <div class="container">
-          <div class="on_sale-header">
+          <div class="section__header">
             <h3>STEALS & DEALS</h3>
             <a href="">SEE MORE</a>
           </div>
+          <div class="swiper">
+            <div class="card-product-wrapper">
+              <ul class="card-list swiper-wrapper">
+                <li class="card-item swiper-slide">
+                  <a href="#" class="card-link"
+                    ><img
+                      class="card-image"
+                      src="assets/images/item.jpg"
+                      alt=""
+                    />
+                    <p class="badge">For 0 - 36 Months</p>
+                    <h2 class="card-title">Baby Clothes</h2>
+                    <h3 class="card-price">P500.00</h3>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="#" class="card-link"
+                    ><img
+                      class="card-image"
+                      src="assets/images/itemtu.jpg"
+                      alt=""
+                    />
+                    <p class="badge">For 4 - 5 Years Old</p>
+                    <h2 class="card-title">Children Clothes</h2>
+                    <h3 class="card-price">P500.00</h3>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="#" class="card-link"
+                    ><img
+                      class="card-image"
+                      src="assets/images/itemtree.jpg"
+                      alt=""
+                    />
+                    <p class="badge">For 6 - 12 Years Old</p>
+                    <h2 class="card-title">Teen Clothes</h2>
+                    <h3 class="card-price">P500.00</h3>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="#" class="card-link"
+                    ><img
+                      class="card-image"
+                      src="assets/images/itemtu.jpg"
+                      alt=""
+                    />
+                    <p class="badge">For 0 - 36 Months</p>
+                    <h2 class="card-title">Baby Clothes</h2>
+                    <h3 class="card-price">P500.00</h3>
+                  </a>
+                </li>
+                <li class="card-item swiper-slide">
+                  <a href="#" class="card-link"
+                    ><img
+                      class="card-image"
+                      src="assets/images/item.jpg"
+                      alt=""
+                    />
+                    <p class="badge">For 0 - 36 Months</p>
+                    <h2 class="card-title">Baby Clothes</h2>
+                    <h3 class="card-price">P500.00</h3>
+                  </a>
+                </li>
+              </ul>
 
-          <div class="on_sale-products">
-            <div class="slider">
-              <button class="cat-btn left">&#10094;</button>
-              <div class="product-grid grid">
-                <!-- CARD 1 -->
-                <div class="product-card card">
-                  <img src="assets/images/item.jpg" alt="" />
-                  <div class="card-info">
-                    <strong class="card-name">PreLoved Baby Rumper Set </strong>
-                    <small class="card-price">100</small>
-                    <div class="card-actions">
-                      <a href="" class="buy_btn">VIEW ITEM</a>
-                      <a href="" class="cart_btn"
-                        ><i class="fa-solid fa-cart-plus"></i
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- CARD 2 -->
-                <div class="product-card card">
-                  <img src="assets/images/itemtu.jpg" alt="" />
-                  <div class="card-info">
-                    <strong class="card-name">GAP</strong>
-                    <small class="card-price">100</small>
-                    <div class="card-actions">
-                      <a href="" class="buy_btn">VIEW ITEM</a>
-                      <a href="" class="cart_btn"
-                        ><i class="fa-solid fa-cart-plus"></i
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- CARD 3 -->
-                <div class="product-card card">
-                  <img src="assets/images/itemtree.jpg" alt="" />
-                  <div class="card-info">
-                    <strong class="card-name">GAP</strong>
-                    <small class="card-price">100</small>
-                    <div class="card-actions">
-                      <a href="" class="buy_btn">VIEW ITEM</a>
-                      <a href="" class="cart_btn"
-                        ><i class="fa-solid fa-cart-plus"></i
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- CARD 4 -->
-                <div class="product-card card">
-                  <img src="assets/images/item.jpg" alt="" />
-                  <div class="card-info">
-                    <strong class="card-name">GAP</strong>
-                    <small class="card-price">100</small>
-                    <div class="card-actions">
-                      <a href="" class="buy_btn">VIEW ITEM</a>
-                      <a href="" class="cart_btn"
-                        ><i class="fa-solid fa-cart-plus"></i
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <button class="cat-btn right">&#10095;</button>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-slider-button swiper-button-prev"></div>
+              <div class="swiper-slider-button swiper-button-next"></div>
             </div>
           </div>
         </div>
       </section>
     </main>
+
+    <!-- LINKING SwiperJS script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <script src="assets/js/slider.js"></script>
 
     <script src="assets/js/script.js"></script>
   </body>
